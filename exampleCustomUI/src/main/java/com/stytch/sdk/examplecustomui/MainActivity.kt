@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         configureStytch()
     }
 
@@ -36,7 +35,6 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
         Stytch.instance.loginMethod = StytchLoginMethod.LoginOrSignUp
 //        Set listener to listen for events
         Stytch.instance.listener = this
-
     }
 
     fun signInClicked(view: View) {
@@ -49,7 +47,6 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
     override fun onNewIntent(intent: Intent?) {
         val action: String? = intent?.action
         val data = intent?.data ?: return
-
         if (action == Intent.ACTION_VIEW) {
             Stytch.instance.handleDeepLink(data)
         }
@@ -60,7 +57,6 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
 //    Stytch.StytchListener implementation
 
     override fun onSuccess(result: StytchResult) {
-
 //        handle success
         Toast.makeText(this, "Success! userId: ${result.userId}", Toast.LENGTH_LONG).show()
     }
