@@ -13,8 +13,8 @@ import com.stytch.sdk.StytchError
 import com.stytch.sdk.StytchLoginMethod
 import com.stytch.sdk.api.StytchResult
 
-private const val PROJECT_ID = "project-test-d0dbafe6-a019-47ea-8550-d021c1c76ea9"//"Your Id"
-private const val SECRET = "secret-test-6-ma0PNENqjBVX6Dx2aPUIdhLFObauXx07c="//"Your secret"
+private const val PROJECT_ID = "PROJECT_ID"//"Your Id"
+private const val SECRET = "SECRET"//"Your secret"
 private const val SCHEME = "https"
 private const val HOST = "custom.ui.stytch.com"
 
