@@ -1,0 +1,3 @@
+include ':examplecustomui'
+include ':exampleUi'
+rootProject.name = "StytchSDKExamples"
