@@ -39,11 +39,11 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
 
     fun signInClicked(view: View) {
         val email = findViewById<AppCompatEditText>(R.id.valueEditText).text?.toString() ?: return
-//       show loading
+//        show loading
         Stytch.instance.login(email)
     }
 
-//  handle deep link
+//        handle deep link
     override fun onNewIntent(intent: Intent?) {
         val action: String? = intent?.action
         val data = intent?.data ?: return
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
     }
 
 
-//    Stytch.StytchListener implementation
+//        Stytch.StytchListener implementation
 
     override fun onSuccess(result: StytchResult) {
 //        handle success
