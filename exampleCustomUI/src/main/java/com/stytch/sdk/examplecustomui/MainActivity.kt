@@ -13,8 +13,8 @@ import com.stytch.sdk.StytchError
 import com.stytch.sdk.StytchLoginMethod
 import com.stytch.sdk.api.StytchResult
 
-private const val PROJECT_ID = "project-test-d0dbafe6-a019-47ea-8550-d021c1c76ea9"//"Your Id"
-private const val SECRET = "secret-test-6-ma0PNENqjBVX6Dx2aPUIdhLFObauXx07c="//"Your secret"
+private const val PROJECT_ID = "PROJECT_ID"//"Your Id"
+private const val SECRET = "SECRET"//"Your secret"
 private const val SCHEME = "https"
 private const val HOST = "custom.ui.stytch.com"
 
@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         configureStytch()
     }
 
@@ -36,20 +35,18 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
         Stytch.instance.loginMethod = StytchLoginMethod.LoginOrSignUp
 //        Set listener to listen for events
         Stytch.instance.listener = this
-
     }
 
     fun signInClicked(view: View) {
         val email = findViewById<AppCompatEditText>(R.id.valueEditText).text?.toString() ?: return
-//       show loading
+//        show loading
         Stytch.instance.login(email)
     }
 
-//  handle deep link
+//        handle deep link
     override fun onNewIntent(intent: Intent?) {
         val action: String? = intent?.action
         val data = intent?.data ?: return
-
         if (action == Intent.ACTION_VIEW) {
             Stytch.instance.handleDeepLink(data)
         }
@@ -57,10 +54,9 @@ class MainActivity : AppCompatActivity(), Stytch.StytchListener {
     }
 
 
-//    Stytch.StytchListener implementation
+//        Stytch.StytchListener implementation
 
     override fun onSuccess(result: StytchResult) {
-
 //        handle success
         Toast.makeText(this, "Success! userId: ${result.userId}", Toast.LENGTH_LONG).show()
     }

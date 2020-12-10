@@ -9,8 +9,8 @@ import android.view.View
 import com.stytch.sdk.*
 import com.stytch.sdk.api.StytchResult
 
-private const val PROJECT_ID = "project-test-d0dbafe6-a019-47ea-8550-d021c1c76ea9"//"Your Id"
-private const val SECRET = "secret-test-6-ma0PNENqjBVX6Dx2aPUIdhLFObauXx07c="//"Your secret"
+private const val PROJECT_ID = "PROJECT_ID"//"Your Id"
+private const val SECRET = "SECRET"//"Your secret"
 private const val SCHEME = "https"
 private const val HOST = "test.stytch.com"
 
@@ -18,9 +18,7 @@ class MainActivity : AppCompatActivity(), StytchUI.StytchUIListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         configureStytch()
-
         findViewById<View>(R.id.textView).setOnClickListener {
             launchStytch()
         }
@@ -29,7 +27,6 @@ class MainActivity : AppCompatActivity(), StytchUI.StytchUIListener {
     private fun launchStytch() {
         StytchUI.instance.showUI(this, this, createCustomization())
     }
-
 
     private fun createCustomization(): StytchUICustomization {
 
@@ -81,10 +78,10 @@ class MainActivity : AppCompatActivity(), StytchUI.StytchUIListener {
     }
 
 
-//    StytchUI.StytchUIListener implementation
+//        StytchUI.StytchUIListener implementation
 
     override fun onSuccess(result: StytchResult) {
-        //handle success
+//        handle success
         Log.d("TAG", "onSuccess: $result")
     }
 
@@ -98,6 +95,6 @@ class MainActivity : AppCompatActivity(), StytchUI.StytchUIListener {
     }
 }
 
-//Extension to convert dp to pixels
+//        Extension to convert dp to pixels
 val Number.dp: Float
     get() = this.toFloat() * Resources.getSystem().displayMetrics.density
