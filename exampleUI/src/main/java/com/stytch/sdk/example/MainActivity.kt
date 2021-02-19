@@ -1,5 +1,6 @@
 package com.stytch.sdk.example
 
+import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import android.util.Log
 import android.view.View
 import com.stytch.sdk.*
 import com.stytch.sdk.api.StytchResult
+import com.stytch.sdk.ui.StytchMainActivity
 
 private const val PROJECT_ID = "PROJECT_ID"//"Your Id"
 private const val SECRET = "SECRET"//"Your secret"
@@ -25,7 +27,14 @@ class MainActivity : AppCompatActivity(), StytchUI.StytchUIListener {
     }
 
     private fun launchStytch() {
-        StytchUI.instance.showUI(this, this, createCustomization())
+        StytchUI.instance.uiListener = this
+        StytchUI.instance.uiCustomization = createCustomization()
+        startStytchActivity()
+    }
+
+    private fun startStytchActivity(){
+        val intent = Intent(this, StytchMainActivity::class.java)
+        startActivity(intent)
     }
 
     private fun createCustomization(): StytchUICustomization {

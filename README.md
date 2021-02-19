@@ -109,14 +109,18 @@ For StytchUI ACTIVITY_NAME = "com.stytch.sdk.ui.StytchMainActivity"
 
 #### Show UI
 
-Call StytchUI instance showUI with Activity/AppCompatActivity/Fragment, StytchUI.StytchUIListener & optional parameter StytchUICustomization
+Setup StytchUICustomization and StytchUI.StytchUIListener before starting StytchMainActivity
 
 ```
-    StytchUI.instance.showUI(
-        this,
-        this,
-        createCustomization()
-    )
+    //Set  StytchUI.StytchUIListener
+    StytchUI.instance.uiListener = this
+
+    //Set StytchUICustomization
+    StytchUI.instance.uiCustomization = createCustomization()
+
+    //Start StytchMainActivity
+    val intent = Intent(this, StytchMainActivity::class.java)
+    startActivity(intent)
 ```
 
 #### UI Customization
