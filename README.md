@@ -53,7 +53,7 @@ android {
 }
             
 dependencies {
-    implementation 'com.stytch.sdk:sdk:0.1.2'
+    implementation 'com.stytch.sdk:sdk:0.2.0'
 }
 ```
 
@@ -133,19 +133,23 @@ StytchUICustomization
 - `subtitleStyle: StytchTextStyle` - Subtitle text style
 - `showSubtitle: Boolean` - Show/hide subtitle
 - `inputCornerRadius: Float` - Input corner radius, size in pixels
-- `inputBackgroundBorderColorId: Int` - Input border color
-- `inputBackgroundColorId: Int` - Input background color
+- `inputBackgroundBorderColor: StytchColor` - Input border color
+- `inputBackgroundColor: StytchColor` - Input background color
 - `inputHintStyle : StytchTextStyle` - Input hint text style
 - `inputTextStyle: StytchTextStyle` - Input text style
 - `buttonTextStyle: StytchTextStyle` - Action button text style
-- `buttonBackgroundColorId : Int` - Action button background color
+- `buttonBackgroundColor : StytchColor` - Action button background color
 - `buttonCornerRadius: Float` - Action button corner radius, size in pixels
 - `showBrandLogo: Boolean` - Show/hide brand logo
-- `backgroundId : Int` - Window background color
+- `backgroundColor : StytchColor` - Window background color
+
+StytchColor
+- `StytchColor.fromColor(color: Int)` - create StytchColor from Color Int
+- `StytchColor.fromColorId(colorInt: Int)` - create StytchColor from Color Resource Id
 
 StytchTextStyle
 - `size: Float` - Text size in pixels
-- `colorId: Int` - Text Color
+- `color: StytchColor` - Text Color
 - `font: Typeface?` - Text font
 
 ##### Handle UI Callbacks

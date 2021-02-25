@@ -2,6 +2,7 @@ package com.stytch.sdk.example
 
 import android.content.Intent
 import android.content.res.Resources
+import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -39,38 +40,38 @@ class MainActivity : AppCompatActivity(), StytchUI.StytchUIListener {
 
     private fun createCustomization(): StytchUICustomization {
 
-        val textColor = R.color.textColor
-        val placeholderTextColor = R.color.placeholderTextColor
-        val inputBackgroundColor = R.color.inputBackgroundColor
-        val backgroundColor = R.color.backgroundColor
+        val textColor = StytchColor.fromColor(Color.parseColor("#6E471F"))
+        val placeholderTextColor = StytchColor.fromColorId( R.color.placeholderTextColor)
+        val inputBackgroundColor =  StytchColor.fromColorId(R.color.inputBackgroundColor)
+        val backgroundColor =  StytchColor.fromColorId(R.color.backgroundColor)
 
         return StytchUICustomization().apply {
 
-            titleStyle.colorId = textColor
+            titleStyle.color = textColor
             titleStyle.size = 25.dp
             titleStyle.font = Typeface.create(null as Typeface?, Typeface.BOLD)
 
-            subtitleStyle.colorId = textColor
+            subtitleStyle.color = textColor
             subtitleStyle.size = 18.dp
             subtitleStyle.font = Typeface.create(null as Typeface?, Typeface.NORMAL)
 
-            inputTextStyle.colorId = textColor
+            inputTextStyle.color = textColor
             inputTextStyle.size = 16.dp
             inputTextStyle.font = Typeface.create(null as Typeface?, Typeface.NORMAL)
-            inputHintStyle.colorId = placeholderTextColor
+            inputHintStyle.color = placeholderTextColor
             inputHintStyle.size = 15.dp
             inputHintStyle.font = Typeface.create(null as Typeface?, Typeface.NORMAL)
-            inputBackgroundColorId = inputBackgroundColor
-            inputBackgroundBorderColorId = textColor
+            this.inputBackgroundColor = inputBackgroundColor
+            inputBackgroundBorderColor = textColor
             inputCornerRadius = 8.dp
 
-            buttonTextStyle.colorId = R.color.white
+            buttonTextStyle.color = StytchColor.fromColorId(R.color.white)
             buttonTextStyle.size = 20.dp
             buttonTextStyle.font = Typeface.create(null as Typeface?, Typeface.BOLD)
-            buttonBackgroundColorId = textColor
+            buttonBackgroundColor = textColor
             buttonCornerRadius = 8.dp
 
-            backgroundId = backgroundColor
+            this.backgroundColor = backgroundColor
             showTitle = true
             showSubtitle = true
             showBrandLogo = true
