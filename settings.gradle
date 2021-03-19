@@ -1,3 +1,2 @@
-include ':exampleCustomUI'
 include ':exampleUI'
 rootProject.name = "StytchSDKExamples"
