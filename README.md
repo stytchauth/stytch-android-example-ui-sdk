@@ -51,7 +51,7 @@ android {
             jvmTarget = '1.8'
       }
 }
-            
+
 dependencies {
     implementation 'com.stytch.sdk:sdk:0.2.0'
 }
@@ -81,8 +81,8 @@ You can specify Stytch environment `TEST` or `LIVE`:
 ```
 
 You can specify Stytch loginMethod `LoginOrSignUp` (default) or `LoginOrInvite`:
-`LoginOrSignUp`  - Send either a login or sign up magic link to the user based on if the email is associated with a user already. 
-`LoginOrInvite` - Send either a login or invite magic link to the user based on if the email is associated with a user already. If an invite is sent a user is not created until the token is authenticated. 
+`LoginOrSignUp`  - Send either a login or sign up magic link to the user based on if the email is associated with a user already.
+`LoginOrInvite` - Send either a login or invite magic link to the user based on if the email is associated with a user already. If an invite is sent a user is not created until the token is authenticated.
 ```
 Stytch.instance.loginMethod = StytchLoginMethod.LoginOrInvite
 ```
@@ -168,7 +168,7 @@ StytchUI.StytchUIListener{
     override fun onFailure() {
         Log.d(TAG,"onFailure: Oh no")
     }
-    
+
     override fun onEvent(event: StytchEvent) {
         Log.d(TAG,"Event Type: ${event.type}")
         Log.d(TAG,"Is user created: ${event.created}")
