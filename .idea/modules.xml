@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StytchSDKExamples.iml" filepath="$PROJECT_DIR$/.idea/modules/StytchSDKExamples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/exampleUI/StytchSDKExamples.exampleUI.iml" filepath="$PROJECT_DIR$/.idea/modules/exampleUI/StytchSDKExamples.exampleUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Stytch_Demo_Android_App.iml" filepath="$PROJECT_DIR$/.idea/modules/Stytch_Demo_Android_App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Stytch_Demo_Android_App.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Stytch_Demo_Android_App.app.iml" />
     </modules>
   </component>
 </project>
