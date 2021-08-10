@@ -25,7 +25,7 @@
         <activity android:name="com.stytch.sdk.StytchEmailMagicLinkActivity"
             android:launchMode="singleTask">
 
-            <intent-filter android:label="Log In">
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
